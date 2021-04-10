@@ -1,9 +1,5 @@
-//
-//  SceneDelegate.swift
-//  weatherApp
-//
-//  Created by Mikhail Frolov on 2021-04-10.
-//
+// Name: Mikhail Frolov
+// ID: 164788184
 
 import UIKit
 

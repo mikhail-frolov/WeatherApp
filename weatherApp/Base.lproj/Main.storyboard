@@ -16,52 +16,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wonderful-2" translatesAutoresizingMaskIntoConstraints="NO" id="Hqs-JF-yKZ">
-                                <rect key="frame" x="-112" y="-216" width="639" height="1328"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RtN-V7-pMT" userLabel="txtCity">
-                                <rect key="frame" x="20" y="194" width="374" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIK-k6-mwG" userLabel="btnGetWeather">
-                                <rect key="frame" x="50" y="720" width="314" height="42"/>
-                                <color key="backgroundColor" red="0.5646092720676773" green="0.73278668975750461" blue="0.67677490221960657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmJ-W8-pjd">
+                                <rect key="frame" x="20" y="97" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.99991267920000004" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYo-bg-WRE">
-                                <rect key="frame" x="20" y="291" width="374" height="279"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="279" id="sfv-Rr-Ko7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.5646092721" green="0.73278668979999995" blue="0.67677490220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njw-K1-Vaz">
+                                <rect key="frame" x="50" y="762" width="314" height="30"/>
+                                <color key="backgroundColor" red="0.5646092721" green="0.73278668979999995" blue="0.67677490220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Weather">
+                                    <color key="titleColor" red="0.99991267920000004" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonCickedWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y7X-4e-jbd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Act-qH-zPQ">
+                                <rect key="frame" x="20" y="324" width="374" height="346"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="kUu-Uq-dbZ"/>
+                                    <constraint firstAttribute="height" constant="346" id="une-v1-HKi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5646092721" green="0.73278668979999995" blue="0.67677490220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ehi-GP-8LJ">
+                                <rect key="frame" x="20" y="207" width="374" height="34"/>
+                                <color key="textColor" red="0.5646092721" green="0.73278668979999995" blue="0.67677490220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FIK-k6-mwG" firstAttribute="top" secondItem="bYo-bg-WRE" secondAttribute="bottom" constant="150" id="228-iA-6A0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYo-bg-WRE" secondAttribute="trailing" constant="20" id="2G9-It-R5d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RtN-V7-pMT" secondAttribute="trailing" constant="20" id="2W0-bb-nk4"/>
-                            <constraint firstItem="RtN-V7-pMT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3PO-84-khB"/>
-                            <constraint firstItem="RtN-V7-pMT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="6p6-g2-J93"/>
-                            <constraint firstAttribute="trailing" secondItem="Hqs-JF-yKZ" secondAttribute="trailing" constant="-113" id="6zA-zd-ZIr"/>
-                            <constraint firstAttribute="bottom" secondItem="Hqs-JF-yKZ" secondAttribute="bottom" constant="-216" id="IFb-4T-PVm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FIK-k6-mwG" secondAttribute="trailing" constant="50" id="R2n-cI-5Td"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FIK-k6-mwG" secondAttribute="bottom" constant="100" id="TtN-HA-2F0"/>
-                            <constraint firstItem="bYo-bg-WRE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aQG-b2-s8v"/>
-                            <constraint firstItem="Hqs-JF-yKZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-112" id="d5T-sr-6os"/>
-                            <constraint firstItem="FIK-k6-mwG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="l1n-wo-9is"/>
-                            <constraint firstItem="bYo-bg-WRE" firstAttribute="top" secondItem="RtN-V7-pMT" secondAttribute="bottom" constant="60" id="raA-vd-SuB"/>
-                            <constraint firstItem="Hqs-JF-yKZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-216" id="wbY-Np-sWh"/>
+                            <constraint firstItem="hmJ-W8-pjd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5Kw-Ys-aCZ"/>
+                            <constraint firstItem="Act-qH-zPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6sm-xn-JYZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ehi-GP-8LJ" secondAttribute="trailing" constant="20" id="9bu-al-kPq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="njw-K1-Vaz" secondAttribute="trailing" constant="50" id="Jat-A7-ADc"/>
+                            <constraint firstItem="Ehi-GP-8LJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TMM-zN-lyT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Act-qH-zPQ" secondAttribute="trailing" constant="20" id="aTQ-DY-Dnr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="njw-K1-Vaz" secondAttribute="bottom" constant="70" id="fde-BP-SHM"/>
+                            <constraint firstItem="Ehi-GP-8LJ" firstAttribute="top" secondItem="hmJ-W8-pjd" secondAttribute="bottom" constant="80" id="lA5-eo-s4K"/>
+                            <constraint firstItem="hmJ-W8-pjd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="o9x-vX-UjH"/>
+                            <constraint firstItem="njw-K1-Vaz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="r6j-97-EjD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hmJ-W8-pjd" secondAttribute="trailing" constant="20" id="xyM-9b-oIT"/>
+                            <constraint firstItem="njw-K1-Vaz" firstAttribute="top" secondItem="Act-qH-zPQ" secondAttribute="bottom" constant="92" id="yLg-t6-5iE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnGetWeather" destination="njw-K1-Vaz" id="CqT-Qm-dcZ"/>
+                        <outlet property="lblWeatherIno" destination="Act-qH-zPQ" id="Omm-Hl-hwD"/>
+                        <outlet property="txtCity" destination="Ehi-GP-8LJ" id="BTh-zF-xdw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +79,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Wonderful-2" width="1587" height="2245"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
